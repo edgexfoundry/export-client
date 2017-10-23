@@ -54,7 +54,7 @@ schemas:
                 body: 
                     application/json: 
                         schema: ExportRegistration
-                        example: '{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"tcp://m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
+                        example: '{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
             "503": 
                 description: for unknown or unanticipated issues
 /registration/{id}: 
@@ -76,7 +76,7 @@ schemas:
                 body: 
                     application/json: 
                         schema: ExportRegistration
-                        example: '{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"tcp://m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
+                        example: '{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
             "503": 
                 description: for unknown or unanticipated issues
 /registration: 
@@ -88,7 +88,7 @@ schemas:
         body: 
             application/json: 
                 schema: ExportRegistration
-                example: '{"origin":1471806386919,"name":"OSIClient","addressable":{"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"tcp://m10.cloudmqtt.com","port":15421,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat", "hallwaythermostat"],"valueDescriptorIdentifiers":["temperature", "humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
+                example: '{"origin":1471806386919,"name":"OSIClient","addressable":{"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"m10.cloudmqtt.com","port":15421,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat", "hallwaythermostat"],"valueDescriptorIdentifiers":["temperature", "humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}'
         responses: 
             "200": 
                 description: the database generated id for the new export registration.
@@ -117,7 +117,7 @@ schemas:
                 body: 
                     application/json: 
                         schema: ExportRegistration
-                        example: '[{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"tcp://m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}]'
+                        example: '[{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}]'
             "503": 
                 description: for unknown or unanticipated issues
 /registration/reference/{type}:
