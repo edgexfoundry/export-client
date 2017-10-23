@@ -123,6 +123,13 @@ schemas:
 /registration/reference/{type}:
     displayName: Export Registration Reference Options Resource
     description: "example - http://localhost:48071/api/v1/registration/reference/compressions"
+    uriParameters: 
+        type: 
+            displayName: type
+            description: Export Client registration property type. Valid types are: "algorithms", "compressions", "formats", and "destinations".
+            type: string
+            required: true
+            repeat: false
     get: 
         description: Fetch all supported values for the specified Export Client registration property type. Types are algorithms, compressions, formats, and destinations. Return ServiceException (HTTP 503) for unknown type specifications.
         displayName: get all supported values for the specified type
