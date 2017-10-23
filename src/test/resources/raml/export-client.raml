@@ -120,6 +120,20 @@ schemas:
                         example: '[{"id":"57db5bd2add4d779d38ff066","created":1473993682339,"modified":1473993682339,"origin":1471806386919,"name":"OSIClient","addressable":{"id":null,"created":0,"modified":0,"origin":1471806386919,"name":"OSIMQTTBroker","protocol":"TCP","address":"tcp://m10.cloudmqtt.com","port":15421,"path":null,"publisher":"EdgeXExportPublisher","user":"hukfgtoh","password":"uP6hJLYW6Ji4","topic":"EdgeXDataTopic"},"format":"JSON","filter":{"deviceIdentifiers":["livingroomthermosat","hallwaythermostat"],"valueDescriptorIdentifiers":["temperature","humidity"]},"encryption":{"encryptionAlgorithm":"AES","encryptionKey":"123","initializingVector":"123"},"compression":"GZIP","enable":true}]'
             "503": 
                 description: for unknown or unanticipated issues
+/registration/reference/{type}:
+    displayName: Export Registration Reference Options Resource
+    description: "example - http://localhost:48071/api/v1/registration/reference/compressions"
+    get: 
+        description: Fetch all supported values for the specified Export Client registration property type. Types are algorithms, compressions, formats, and destinations. Return ServiceException (HTTP 503) for unknown type specifications.
+        displayName: get all supported values for the specified type
+        responses: 
+            "200": 
+                description: a list of all supported values for the specified client export registration property type
+                body: 
+                    application/json: 
+                        example: '["NONE","GZIP","ZIP"]'
+            "503": 
+                description: for unknown types or unanticipated issues
 /ping: 
     displayName: Ping Resource
     description: "example - http://localhost:48071/api/v1/ping"
